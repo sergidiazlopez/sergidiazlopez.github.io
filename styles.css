@@ -1,17 +1,91 @@
-* {
-  margin:0px;
-  padding:0px;
+:root {
+  --background-color-light: #fff7e3;
+  --text-color-light: #333333;
+  --background-color-dark: #111111;
+  --text-color-dark: #f2f2f2;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--background-color-dark);
+		color: var(--text-color-dark);
+	}
+	#selector-container a:hover{
+		color: #FFFFFF;
+		text-shadow: #474747 0px 0px 0px;
+	}
+}
+
+
+
+.logo-text{
+text-align: left;
+font-family: "Cascadia Mono", Monaco, monospace;
+font-size: 24px;
+letter-spacing: 2px;;
+color: #444444;
+text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+
+/*Typing animation*/
+border-right: 2px solid #000; /* Cursor appears as a vertical line */
+display: inline-block;
+overflow: hidden;
+white-space: nowrap;
+animation: typing 2s steps(13) forwards, hidecursor 3s forwards;
+
+}
+
+#logo-container
+{
+	display: inline-block;
+	align-items: center;
+	width: 250px;
+	
+}
+#header{
+	align-items: center;
+	text-align: center;
+}
+
+#selector-container{
+text-align: center;
+margin: 10 0px;
+
+}
+
+#selector-container a{
+display: inline-block;
+margin: 15px;
+text-align: center;
+font-family: "Cascadia Mono", Monaco, monospace;
+font-size: 18px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #444444;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#selector-container a:hover{
+	color: #000000;
+	text-shadow: #474747 0px 0px 0px;
+	transform: scale(1.1);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes hidecursor {
+  99% { border-right: 2px solid #000; }
+  100% { border-right: 0px solid #000; }
 }
