@@ -10,22 +10,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet"> 
 
     <style>
+    	:root {
+   			--bg-color: #ffffff; /* Light mode background color */
+			--text-color: #333333; /* Light mode text color */
+			--text-color-alt: #444444; /* Light mode text color */
+			--bg-gradient1: #f2f2f2;
+			--bg-gradient2: #cfcfcf;
+			--bg-header: #1d1d1d;
+			--header-line-color: #587484;
+		}
+		
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-color: #262626; /* Dark mode background color */
+				--text-color: #ffffff; /* Dark mode text color */
+				--text-color-alt: #ffffff; /* Light mode text color */
+				--bg-gradient1: #121212;
+				--bg-gradient2: #121212;
+				--bg-header: #1d1d1d;
+				--header-line-color: #1d1d1d;
+			}
+			.icon {
+    			filter: invert(1);
+			}
+		}
+
 	    body {
 	        font-family: 'Roboto', sans-serif;
 	        margin: 0;
 	        padding: 0;
-	        background: linear-gradient(to bottom, #f2f2f2, #cfcfcf); /* Replace these colors with your desired gradient */
+	        background: linear-gradient(to bottom, var(--bg-gradient1), var(--bg-gradient2)); /* Replace these colors with your desired gradient */
 	    }
 	    .container {
 	        max-width: 800px;
 	        margin: 0 auto;
 	        padding: 0px;
-	        background-color: #fff;
+	        background-color: var(--bg-color);
 	        border-radius: 5px;
 	        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	    }
 	    .header {
-	        background-color: #1a1a1a;
+	        background-color: var(--bg-header);
 	        color: #fff;
 	        display: grid;
 	        grid-template-columns: 1fr auto;
@@ -33,7 +59,8 @@
 	        align-items: center;
 	        padding: 20px;
 	        border-radius: 5px 5px 0 0;
-	        border-bottom: 2px solid #587484;
+	        border-bottom: 2px solid var(--header-line-color);
+	        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add a drop shadow to the bottom */
 	    }
 
 	    .profile-picture {
@@ -64,16 +91,16 @@
 	        font-size: 22px;
 	        margin-top: 10px;
 	        margin-bottom: 5px;
-	        color: #333;
+	        color: var(--text-color);
 	    }
 	    p {
 	        margin-bottom: 5px;
-	        color: #444;
+	        color: var(--text-color-alt);
 	    }
 	    ul {
 	        margin-top: 0;
 	        padding-left: 20px;
-	        color: #444;
+	        color: var(--text-color-alt);
 	    }
 	    .header a {
 	        text-decoration: none;
@@ -83,6 +110,11 @@
 
 	    .header a:hover {
 	        text-decoration: underline; /* Add underline on hover */
+	    }
+
+	    a {
+	        text-decoration: underline;
+	        color: var(--text-color);
 	    }
 
 	    footer {
@@ -97,6 +129,13 @@
 		        width: 100%; /* Make columns stack on top of each other for smaller screens */
 		    }
 		}
+
+		#dark-mode-toggle:checked ~ body {
+		    background-color: var(--bg-color);
+		    color: var(--text-color);
+		}
+
+
 	</style>
 </head>
 <body>
@@ -105,15 +144,15 @@
             <div>
     			<h1>Sergi Diaz Lopez</h1>
     			<p>
-    				<img src="icons8-mail-16-invert.png" alt="Email Icon" style="vertical-align: middle; margin-right: 0px;">
+    				<img src="icons8-mail-16-invert.png" alt="Email Icon" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
     				<a href="mailto:sergidiazlopez@gmail.com">sergidiazlopez@gmail.com</a>
     			</p>
     			<p>
-                    <img src="icons8-linkedin-16-invert.png" alt="Linkedin" style="vertical-align: middle; margin-right: 0px;">
+                    <img src="icons8-linkedin-16-invert.png" alt="Linkedin" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
                     <a href="https://www.linkedin.com/in/sergi-diaz-lopez-4a0955285/" target="_blank">https://www.linkedin.com/in/sergi-diaz-lopez-4a0955285/</a>
                 </p>
     			<p>
-                    <img src="icons8-github-16-invert.png" alt="Github" style="vertical-align: middle; margin-right: 0px;">
+                    <img src="icons8-github-16-invert.png" alt="Github" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
                     <a href="https://github.com/sergidiazlopez" target="_blank">https://github.com/sergidiazlopez</a>
                 </p>
             </div>
@@ -144,7 +183,7 @@
                 <ul>
                     <li>
                         <p>
-                            <img src="icons8-map-16.png" style="vertical-align: middle; margin-right: 0px;">
+                            <img src="icons8-map-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                             Map Application for Shortest Paths (Backend & Algorithms)
                         </p>
                         <ul>
@@ -154,7 +193,7 @@
                     </li>
                     <li>
                         <p>
-                            <img src="icons8-torrent-16.png" style="vertical-align: middle; margin-right: 0px;">
+                            <img src="icons8-torrent-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                             Trivial Torrent (Networking)
                         </p>
                         <ul>
@@ -165,7 +204,7 @@
                     </li>
                     <li>
                         <p>
-                            <img src="icons8-twitter-16.png" style="vertical-align: middle; margin-right: 0px;">
+                            <img src="icons8-twitter-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                             Tweet Classification
                         </p>
                         
@@ -181,7 +220,7 @@
                 <h2>Skills</h2>
                 <ul>
                     <li>
-                        <img src="icons8-source-code-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-source-code-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Programming Languages: 
                         <ul>
                             <li>Python</li>
@@ -191,31 +230,31 @@
                         </ul>
                     </li>
                     <li>
-                        <img src="icons8-web-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-web-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Web Development: HTML, CSS, JavaScript
                     </li>
                     <li>
-                        <img src="icons8-game-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-game-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Game Development with Unity (C#)
                     </li>
                     <li>
-                        <img src="icons8-console-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-console-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Software Development Tools: Visual Studio IDE, Visual Studio Code, JetBrains IDE, Git
                     </li>
                     <li>
-                        <img src="icons8-virtual-machine-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-virtual-machine-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Power user in both Windows and Linux Operating Systems
                     </li>
                     <li>
-                        <img src="icons8-tree-structure-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-tree-structure-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Data Structures and Algorithms
                     </li>
                     <li>
-                        <img src="icons8-critical-thinking-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-critical-thinking-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Problem Solving and Critical Thinking
                     </li>
                     <li>
-                        <img src="icons8-bug-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-bug-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Strong Analytical and Debugging Skills
                     </li>
                 </ul>
@@ -224,15 +263,15 @@
                 <p>These are skills where I have limited experience:</p>
                 <ul>
                     <li>
-                        <img src="icons8-bot-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-bot-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Some experience in Machine Learning: Linear Regression, Neural Networks...
                     </li>
                     <li>
-                        <img src="icons8-database-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-database-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Databases: SQL Oracle
                     </li>
                     <li>
-                        <img src="icons8-docker-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-docker-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Some experience in deployment using Docker
                     </li>
                 </ul>
@@ -241,11 +280,11 @@
                 <p>In the future, I want to learn about the following topics:</p>
                 <ul>
                     <li>
-                        <img src="icons8-android-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-android-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Android App Development
                     </li>
                     <li>
-                        <img src="icons8-video-card-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-video-card-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         3D and Game Engine development using Graphics APIs
                     </li>
                 </ul>
@@ -253,7 +292,7 @@
                 <h2>Languages</h2>
                 <ul>
                     <li>
-                        <img src="icons8-language-16.png" style="vertical-align: middle; margin-right: 0px;">
+                        <img src="icons8-language-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Fluent in Spanish, English and Catalan
                     </li>
                 </ul>
