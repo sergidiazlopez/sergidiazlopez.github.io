@@ -4,139 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sergi Diaz Lopez - Computer Science CV</title>
-	<link rel="icon" type="image/png" href="icons8-cv-16.png">
+	<link rel="icon" type="image/png" href="ico/icons8-cv-16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet"> 
 
-    <style>
-    	:root {
-   			--bg-color: #ffffff; /* Light mode background color */
-			--text-color: #1f1a24; /* Light mode text color */
-			--text-color-alt: #444444; /* Light mode text color */
-			--bg-gradient1: #f2f2f2;
-			--bg-gradient2: #cfcfcf;
-			--bg-header: #1d1d1d;
-			--header-line-color: #1f1a24;
-		}
-		
-
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--bg-color: #1a1c18; /* Dark mode background color */
-				--text-color: #f6ffe8; /* Dark mode text color */
-				--text-color-alt: #ffffff; /* Light mode text color */
-				--bg-gradient1: #10120E;
-				--bg-gradient2: #10120E;
-				--bg-header: #1a1c18;
-				--header-line-color: #1a1c18;
-			}
-			.icon {
-    			filter: invert(1);
-			}
-		}
-
-	    body {
-	        font-family: 'Roboto', sans-serif;
-	        margin: 0;
-	        padding: 0;
-	        background: linear-gradient(to bottom, var(--bg-gradient1), var(--bg-gradient2)); /* Replace these colors with your desired gradient */
-	    }
-	    .container {
-	        max-width: 800px;
-	        margin: 0 auto;
-	        padding: 0px;
-	        background-color: var(--bg-color);
-	        border-radius: 5px;
-	        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	    }
-	    .header {
-	        background-color: var(--bg-header);
-	        color: #fff;
-	        display: grid;
-	        grid-template-columns: 1fr auto;
-	        margin: 0px;
-	        align-items: center;
-	        padding: 20px;
-	        border-radius: 5px 5px 0 0;
-	        border-bottom: 2px solid var(--header-line-color);
-	        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add a drop shadow to the bottom */
-	    }
-
-	    .profile-picture {
-	        width: 150px;
-	        height: 150px;
-	        border-radius: 50%;
-	        object-fit: cover;
-	    }
-	    .two-columns {
-	        padding: 20px;
-	        display: flex;
-	        justify-content: space-between;
-	        flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
-	    }
-
-	    .column {
-	        width: 48%;
-
-	    }
-
-
-	    h1 {
-	        font-family: 'Source Serif 4', serif;
-	        font-size: 30px;
-	    }
-	    h2 {
-	        font-family: 'Source Serif 4', serif;
-	        font-size: 22px;
-	        margin-top: 10px;
-	        margin-bottom: 5px;
-	        color: var(--text-color);
-	    }
-	    p {
-	        margin-bottom: 5px;
-	        color: var(--text-color-alt);
-	    }
-	    ul {
-	        margin-top: 0;
-	        padding-left: 20px;
-	        color: var(--text-color-alt);
-	    }
-	    .header a {
-	        text-decoration: none;
-	        transition: text-decoration 1s; /* Add a smooth transition for the underline */
-	        color: #fff;
-	    }
-
-	    .header a:hover {
-	        text-decoration: underline; /* Add underline on hover */
-	    }
-
-	    a {
-	        text-decoration: underline;
-	        color: var(--text-color);
-	    }
-
-	    footer {
-	        margin-top: 20px;
-	        text-align: center;
-	        color: #777;
-	    }
-
-	    @media (max-width: 768px) {
-	    /* Apply styles when the screen width is 768px or smaller (typical for mobile devices) */
-		    .column {
-		        width: 100%; /* Make columns stack on top of each other for smaller screens */
-		    }
-		}
-
-		#dark-mode-toggle:checked ~ body {
-		    background-color: var(--bg-color);
-		    color: var(--text-color);
-		}
-
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/cv.css">
 </head>
 <body>
     <div class="container">
@@ -144,15 +17,15 @@
             <div>
     			<h1>Sergi Diaz Lopez</h1>
     			<p>
-    				<img src="icons8-mail-16-invert.png" alt="Email Icon" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
+    				<img src="ico/icons8-mail-16-invert.png" alt="Email Icon" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
     				<a href="mailto:sergidiazlopez@gmail.com">sergidiazlopez@gmail.com</a>
     			</p>
     			<p>
-                    <img src="icons8-linkedin-16-invert.png" alt="Linkedin" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
+                    <img src="ico/icons8-linkedin-16-invert.png" alt="Linkedin" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
                     <a href="https://www.linkedin.com/in/sergidl/" target="_blank">https://www.linkedin.com/in/sergidl/</a>
                 </p>
     			<p>
-                    <img src="icons8-github-16-invert.png" alt="Github" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
+                    <img src="ico/icons8-github-16-invert.png" alt="Github" style="vertical-align: middle; margin-right: 0px;" class=icon-header>
                     <a href="https://github.com/sergidiazlopez" target="_blank">https://github.com/sergidiazlopez</a>
                 </p>
             </div>
@@ -162,15 +35,15 @@
         <div class="two-columns">
             <div class="column">
                 <h2>Profile</h2>
-                <p>Highly passionate computer science student seeking internship opportunity to further develop technical skills and gain practical experience in the field. Strong foundation in programming languages and algorithms, with a passion for problem-solving and innovation. Eager to contribute to a dynamic team and contribute to the advancement of technology.</p>
+                <p>Highly passionate computer science student seeking internship opportunity to further develop technical skills and gain practical experience in the field. Strong foundation in programming languages and algorithms, with a passion for problem-solving and innovation.</p>
 
                 <h2>Education</h2>
                 <ul>
                     <li>
-                        Computer Science
+                        Degree in Computer Science
                     </li>
                     <li>
-                        (Enginyeria informatica, menció computació)
+                        (Grau en Enginyeria Informàtica, Menció Computació)
                     </li>
                     <li>
                         Universitat Autònoma de Barcelona
@@ -179,23 +52,19 @@
                         Started Septembrer 2020. Currently in my 4th year
                     </li>
                 </ul>
-                <h2>Remarkable Academic Projects</h2>
+                <h2>Academic Projects</h2>
                 <ul>
                     <li>
-                        <p>
-                            <img src="icons8-map-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
-                            Map Application for Shortest Paths (Backend & Algorithms)
-                        </p>
+                        <img src="ico/icons8-map-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <a href="https://github.com/sergidiazlopez/GraphApplication">Map Application for Shortest Paths (Backend & Algorithms)</a>
                         <ul>
                             <li>Developed an application to calculate the shortest track between a set of points (Salesman Problem).</li>
-                            <li>Implemented algorithms: Greedy, Backtracking, Branch&Bound.</li>
+                            <li>Implemented algorithms: Greedy, Backtracking, Branch&Bound, Probabilistic.</li>
                         </ul>
                     </li>
                     <li>
-                        <p>
-                            <img src="icons8-torrent-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
-                            Trivial Torrent (Networking)
-                        </p>
+                        <img src="ico/icons8-torrent-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <a href="https://github.com/sergidiazlopez/ttorrent">Trivial Torrent (Networking)</a>
                         <ul>
                             <li>Implementation of a simplified torrent-like server and client to share and download files from various seeds and peers.</li>
                             <li>Working with POSIX sockets and networking with TCP, UDP, and IP using C programming language.</li>
@@ -203,11 +72,8 @@
                         </ul>
                     </li>
                     <li>
-                        <p>
-                            <img src="icons8-twitter-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
-                            Tweet Classification
-                        </p>
-                        
+                        <img src="ico/icons8-twitter-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <a href="https://github.com/sergidiazlopez/TweetClassification">Tweet Classification</a>
                         <ul>
                             <li>Designed a program that classifies tweets into two categories: Emotionally negative and emotionally positive.</li>
                             <li>Made using Naïve Bayes. Programming in Python.</li>
@@ -220,41 +86,43 @@
                 <h2>Skills</h2>
                 <ul>
                     <li>
-                        <img src="icons8-source-code-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-source-code-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Programming Languages: 
                         <ul>
+							<li>C & C++</li>
+							<li>C#</li>
                             <li>Python</li>
                             <li>Java</li>
-                            <li>C & C++</li>
-                            <li>C#</li>
+                            
+                            
                         </ul>
                     </li>
                     <li>
-                        <img src="icons8-web-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-web-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Web Development: HTML, CSS, JavaScript
                     </li>
                     <li>
-                        <img src="icons8-game-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-game-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Game Development with Unity (C#)
                     </li>
                     <li>
-                        <img src="icons8-console-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-console-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Software Development Tools: Visual Studio IDE, Visual Studio Code, JetBrains IDE, Git
                     </li>
                     <li>
-                        <img src="icons8-virtual-machine-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-virtual-machine-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Power user in both Windows and Linux Operating Systems
                     </li>
                     <li>
-                        <img src="icons8-tree-structure-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-tree-structure-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Data Structures and Algorithms
                     </li>
                     <li>
-                        <img src="icons8-critical-thinking-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-critical-thinking-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Problem Solving and Critical Thinking
                     </li>
                     <li>
-                        <img src="icons8-bug-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-bug-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Strong Analytical and Debugging Skills
                     </li>
                 </ul>
@@ -263,46 +131,36 @@
                 <p>These are skills where I have limited experience:</p>
                 <ul>
                     <li>
-                        <img src="icons8-bot-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-bot-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Some experience in Machine Learning: Linear Regression, Neural Networks...
                     </li>
+         
                     <li>
-                        <img src="icons8-database-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-database-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Databases: SQL Oracle
                     </li>
                     <li>
-                        <img src="icons8-docker-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        <img src="ico/icons8-docker-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
                         Some experience in deployment using Docker
                     </li>
                 </ul>
 
-                <h2>Interests</h2>
-                <p>In the future, I want to learn about the following topics:</p>
-                <ul>
-                    <li>
-                        <img src="icons8-android-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
-                        Android App Development
-                    </li>
-                    <li>
-                        <img src="icons8-video-card-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
-                        3D and Game Engine development using Graphics APIs
-                    </li>
-                </ul>
+             
 
                 <h2>Languages</h2>
                 <ul>
                     <li>
-                        <img src="icons8-language-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
-                        Fluent in Spanish, English and Catalan
+                        <img src="ico/icons8-language-16.png" style="vertical-align: middle; margin-right: 0px;" class=icon>
+                        Fluent in Spanish, Catalan and English (C2)
                     </li>
                 </ul>
             </div>
         </div>
 
         <footer>
-            <p>Last update: 19-September-2023</p>
+            <p>Last update: 11-October-2023</p>
 			<p>https://sergidiazlopez.github.io/cv</p>
-            <p>Using <a href="https://icons8.com/icons/small">Simple Small</a> icons from <a href="https://icons8.com/">icons8.com</a></p>
+            <p>Using <a href="https://ico/icons8.com/icons/small">Simple Small</a> icons from <a href="https://ico/icons8.com/">ico/icons8.com</a></p>
         </footer>
     </div>
 </body>
