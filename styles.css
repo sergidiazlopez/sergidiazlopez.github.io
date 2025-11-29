@@ -1,0 +1,147 @@
+/* Import Source Serif 4 for titles */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap');
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* BODY */
+body {
+    background: #f5f5f5;
+    padding: 40px;
+    display: flex;
+	justify-content: center;
+    font-family: "Georgia", serif;
+}
+
+.container {
+    background: white;
+    width: 900px;
+    padding: 40px 50px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: "Source Serif 4", serif;
+    //color: #0e4da7;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    max-width: 550px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.location {
+    text-align: right;
+    font-size: 15px;
+    font-family: "Georgia", serif;
+}
+
+/* LAYOUT */
+main {
+    display: flex;
+    gap: 60px;
+}
+
+.left {
+    width: 65%;
+}
+
+.right {
+    width: 30%;
+}
+
+/* SECTION TITLES */
+h2 {
+    font-family: "Source Serif 4", serif;
+    margin: 25px 0 10px;
+    //color: #0e4da7;
+    color: #005149;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+/* ENTRIES */
+.entry {
+    margin-bottom: 20px;
+}
+
+.entry h3 {
+    font-family: "Source Serif 4", serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.entry p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Georgia", serif;
+    text-indent: 0em;
+}
+
+.place {
+    //font-weight: bold;
+    text-indent: 0px !important;
+}
+
+.date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+    text-indent: 0px !important;
+}
+
+a {
+	color: #005149;
+
+}
+
+
+
+/* SIDEBAR */
+.sidebar-section ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.sidebar-section li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: "Georgia", serif;
+}
+
+/* for languages */
+.lang-select {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.lang-select li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: "Georgia", serif;
+}
+
+
+
+
+
